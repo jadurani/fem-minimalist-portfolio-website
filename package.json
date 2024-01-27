@@ -1,7 +1,17 @@
 {
   "name": "fem-minimalist-portfolio-website",
+  "author": {
+    "name": "Jadurani Davalos",
+    "email": "jadurani.davalos@gmail.com",
+    "url": "https://jadurani.me"
+  },
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": "9.6.7",
+    "yarn": "please-use-npm"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
