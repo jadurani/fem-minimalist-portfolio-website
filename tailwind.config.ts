@@ -8,14 +8,6 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      verdigris: "#5FB4A2", // cyan
-      elephant: "#203A4C", // dark blue
-      tuna: "#33323D", // greyish dark blue
-      alabaster: "#FAFAFA", // BG
-      eggshell: "#EAEAEB", // text field
-      error: "#F43030"
-    },
     screens: {
       xs: "320px",
       sm: "640px",
@@ -35,6 +27,14 @@ const config: Config = {
       h1: "3.052rem",
     },
     extend: {
+      colors: {
+        verdigris: "#5FB4A2", // cyan
+        elephant: "#203A4C", // dark blue
+        tuna: "#33323D", // greyish dark blue
+        alabaster: "#FAFAFA", // BG
+        eggshell: "#EAEAEB", // text field
+        error: "#F43030",
+      },
       fontFamily: {
         heading: ["var(--font-heading)", ...fontFamily.sans],
         body: ["var(--font-body)", ...fontFamily.sans],
