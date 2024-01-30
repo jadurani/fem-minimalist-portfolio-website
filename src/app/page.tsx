@@ -1,14 +1,23 @@
 "use client";
 
+import devImage from "@assets/images/home/home-dev-image.jpg";
 import { Button } from "@components/Button/Button";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
-      <section>
-        {/*  */}
+      <section className="container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center">
+        <div className="w-[320px] h-[320px] sm:w-full sm:h-[520px] relative">
+          <Image
+            src={devImage}
+            fill
+            alt="developer image"
+            className="object-cover object-right"
+          />
+        </div>
 
-        <article className="py-8 border-t-2 border-b-2 solid border-tuna/5">
+        <article className="w-full py-8 border-t-2 border-b-2 solid border-tuna/5">
           <header className="font-heading font-bold text-h2 md:text-h1">
             About Me
           </header>
@@ -29,13 +38,13 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="py-8">
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
-          <p className="text-center md:w-1/2 md:text-left font-heading text-h2 font-bold leading-none md:text-h1">
+      <section className="my-8 py-8 container mx-auto">
+        <div className="flex flex-col gap-8 sm:flex-row md:justify-between">
+          <p className="text-center sm:w-full sm:text-left font-heading text-h2 font-bold leading-none md:text-h1">
             Interested in doing a project together?
           </p>
 
-          <div className="flex justify-center md:justify-end items-center md:w-1/2">
+          <div className="flex justify-center sm:justify-end items-center sm:w-1/2">
             <Button label="Contact Me" handleClick={() => {}}></Button>
           </div>
         </div>
