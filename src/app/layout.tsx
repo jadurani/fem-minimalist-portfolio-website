@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${FontHeading.variable} ${FontBody.variable}`}>{children}</body>
+      <body className={`${FontHeading.variable} ${FontBody.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
