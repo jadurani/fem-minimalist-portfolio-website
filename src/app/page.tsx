@@ -1,109 +1,88 @@
+"use client";
+
+import devImage from "@assets/images/home/home-dev-image.jpg";
+import imgLandingBG from "@assets/images/home/landing-bg.jpg";
+import { Button } from "@components/Button/Button";
+import { NavBar } from "@components/NavBar/NavBar";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Home() {
+  const activeRoute = usePathname();
+  const router = useRouter();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="text-h1 text-elephant">sdfasdfa</div>
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-heading text-h4 font-bold text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-body bg-primary">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer">
-            By{" "}
+    <>
+      <NavBar activeRoute={activeRoute}></NavBar>
+
+      <main>
+        <section className="px-8 container mx-auto mb-16 relative">
+          <div className="relative w-full h-full">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={imgLandingBG}
+              alt="hero image"
+              className="object-cover object-center h-full"
             />
-          </a>
-        </div>
-      </div>
+          </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          <div className="bg-alabaster w-full md:bottom-0 md:left-8 md:absolute md:w-2/3 lg:w-2/5 z-10">
+            <h1 className="font-heading font-bold text-h2 py-8 leading-none md:text-h1">
+              Hey, I&#39;m Alex Spencer and I love building beautiful websites
+            </h1>
+            <Button
+              label="About Me"
+              isPrimary={true}
+              handleClick={() => {}}></Button>
+          </div>
+        </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <section className="px-8 container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center">
+          <div className="w-[320px] h-[320px] sm:w-full sm:h-[520px] relative">
+            <Image
+              src={devImage}
+              fill
+              alt="developer image"
+              className="object-cover object-right"
+            />
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <article className="w-full py-8 border-t-2 border-b-2 solid border-tuna/5">
+            <header className="font-heading font-bold text-h2 md:text-h1">
+              About Me
+            </header>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            <p className="text-tuna/60 py-4">
+              I&#39;m a junior front-end developer looking for a new role in an
+              exciting company. I focus on writing accessible HTML, using modern
+              CSS practices and writing clean JavaScript. When writing
+              JavaScript code, I mostly use React, but I can adapt to whatever
+              tools are required. I&#39;m based in London, UK, but I&#39;m happy
+              working remotely and have experience in remote teams. When I&#39;m
+              not coding, you&#39;ll find me outdoors. I love being out in
+              nature whether that&#39;s going for a walk, run or cycling.
+              I&#39;d love you to check out my work.
+            </p>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <Button
+              label="Go to Portfolio"
+              handleClick={() => router.push("/portfolio")}></Button>
+          </article>
+        </section>
+
+        <section className="px-8 my-8 py-8 container mx-auto">
+          <div className="flex flex-col gap-8 sm:flex-row md:justify-between">
+            <p className="text-center sm:w-full sm:text-left font-heading text-h2 font-bold leading-none md:text-h1">
+              Interested in doing a project together?
+            </p>
+
+            <div className="flex justify-center sm:justify-end items-center sm:w-1/2">
+              <Button
+                label="Contact Me"
+                handleClick={() => router.push("/contact-me")}></Button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
