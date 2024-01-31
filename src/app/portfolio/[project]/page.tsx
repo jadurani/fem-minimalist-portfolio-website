@@ -2,25 +2,25 @@
 
 import { Button } from "@components/Button/Button";
 import { NavBar } from "@components/NavBar/NavBar";
+import { PROJECTS } from "@lib/projects.contant";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-
-const proj = {
-  title: "Manage",
-  description:
-    "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
-  thumbnailName: "image-portfolio-manage.jpg",
-  link: "manage",
-  staticPhotos: {
-    hero: "/images/detail/desktop/image-bookmark-hero.jpg",
-    preview1: "/images/detail/desktop/image-bookmark-preview-1@2x.jpg",
-    preview2: "/images/detail/desktop/image-bookmark-preview-2@2x.jpg",
-  },
-};
+import { usePathname, useRouter } from "next/navigation";
 
 export default function ProjectPage() {
   const router = useRouter();
+  const [_, __, projectLink] = usePathname().split("/");
+  const proj = PROJECTS.find((p) => p.link == projectLink);
+  const projIndex = PROJECTS.findIndex((p) => p.link == projectLink);
+
+  const nextProjectIdx = projIndex + 1 == PROJECTS.length ? 0 : projIndex + 1;
+  const prevProjectIdx =
+    projIndex - 1 < 0 ? PROJECTS.length - 1 : projIndex - 1;
+
+  if (!proj) {
+    router.replace("/portfolio");
+    return <></>;
+  }
 
   return (
     <>
@@ -117,7 +117,7 @@ export default function ProjectPage() {
         {/* next and previous pages */}
         <section className="container mx-auto flex items-center justify-between flex-row flex-no-wrap border-t-2 border-b-2 solid border-tuna/5">
           <Link
-            href={""}
+            href={PROJECTS[prevProjectIdx].link}
             className="flex flex-col items-start md:flex-row md:items-center py-4 hover:bg-eggshell transition-colors flex-grow border-r-2 solid border-tuna/5">
             <Image
               className="mb-2 md:my-auto md:mx-4"
@@ -127,15 +127,15 @@ export default function ProjectPage() {
               height={12}></Image>
             <span>
               <span className="block font-heading text-h3 md:text-h2">
-                Manage
+                {PROJECTS[prevProjectIdx].title}
               </span>
               <span className="text-tuna/60 block -mt-2">Previous Project</span>
             </span>
           </Link>
 
           <Link
-            href={""}
-            className="flex flex-col items-end md:flex-row-reverse md:items-center py-4 hover:bg-eggshell transition-colors flex-grow">
+            href={PROJECTS[nextProjectIdx].link}
+            className="flex flex-col items-end text-right md:flex-row-reverse md:items-center py-4 hover:bg-eggshell transition-colors flex-grow">
             <Image
               className="mb-2 md:my-auto md:mx-4"
               alt="arrow right"
@@ -144,7 +144,7 @@ export default function ProjectPage() {
               height={12}></Image>
             <span>
               <span className="block font-heading text-h3 md:text-h2">
-                Manage
+                {PROJECTS[nextProjectIdx].title}
               </span>
               <span className="text-tuna/60 block -mt-2">Next Project</span>
             </span>
