@@ -1,3 +1,4 @@
+import ContactPrompt from "@components/ContactPrompt/ContactPrompt";
 import Footer from "@components/Footer/Footer";
 import { FontBody, FontHeading } from "@lib/fonts";
 import type { Metadata } from "next";
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className={`${FontHeading.variable} ${FontBody.variable}`}>
         {children}
       </body>
+      <ContactPrompt />
       <Footer />
     </html>
   );
