@@ -55,7 +55,7 @@ export default function PortfolioPage() {
         {PROJECTS.map((proj, idx) => (
           <div
             key={idx}
-            className={`my-8 md:my-16 px-8 flex flex-col ${idx % 2 ? "md:flex-row-reverse" : "md:flex-row"} gap-4 md:gap-16 justify-center items-stretch`}>
+            className={`${idx != 0 ? "mt-16" : ""} px-8 flex flex-col ${idx % 2 ? "md:flex-row-reverse" : "md:flex-row"} gap-4 md:gap-16 justify-center items-stretch`}>
             <div className="flex-grow w-full relative self-stretch min-h-[320px]">
               <img
                 className="object-cover m-auto"
