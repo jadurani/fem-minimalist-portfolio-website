@@ -1,3 +1,4 @@
+import Footer from "@components/Footer/Footer";
 import { FontBody, FontHeading } from "@lib/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={`${FontHeading.variable} ${FontBody.variable}`}>
         {children}
       </body>
+      <Footer />
     </html>
   );
 }
