@@ -3,6 +3,7 @@
 import devImage from "@assets/images/home/home-dev-image.jpg";
 import imgLandingBG from "@assets/images/home/landing-bg.jpg";
 import { Button } from "@components/Button/Button";
+import ContactPrompt from "@components/ContactPrompt/ContactPrompt";
 import { NavBar } from "@components/NavBar/NavBar";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -16,7 +17,7 @@ export default function Home() {
       <NavBar activeRoute={activeRoute}></NavBar>
 
       <main>
-        <section className="px-8 container mx-auto mb-16 relative">
+        <section className="max-w-6xl px-8 container mx-auto mb-16 relative">
           <div className="relative w-full h-full">
             <Image
               src={imgLandingBG}
@@ -36,7 +37,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="px-8 container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center">
+        <section className="max-w-6xl px-8 container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center mb-8">
           <div className="w-[320px] h-[320px] sm:w-full sm:h-[520px] relative">
             <Image
               src={devImage}
@@ -46,7 +47,7 @@ export default function Home() {
             />
           </div>
 
-          <article className="w-full py-8 border-t-2 border-b-2 solid border-tuna/5">
+          <article className="w-full self-stretch flex-grow flex flex-col justify-center py-8 border-t-2 border-b-2 solid border-tuna/5">
             <header className="font-heading font-bold text-h2 md:text-h1">
               About Me
             </header>
@@ -63,10 +64,16 @@ export default function Home() {
               I&#39;d love you to check out my work.
             </p>
 
-            <Button
-              label="Go to Portfolio"
-              handleClick={() => router.push("/portfolio")}></Button>
+            <div>
+              <Button
+                label="Go to Portfolio"
+                handleClick={() => router.push("/portfolio")}></Button>
+            </div>
           </article>
+        </section>
+
+        <section className="max-w-6xl container mx-auto px-8">
+          <ContactPrompt />
         </section>
       </main>
     </>

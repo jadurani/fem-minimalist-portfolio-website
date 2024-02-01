@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@components/Button/Button";
+import ContactPrompt from "@components/ContactPrompt/ContactPrompt";
 import { NavBar } from "@components/NavBar/NavBar";
 import { PROJECTS } from "@lib/projects.contant";
 import Image from "next/image";
@@ -26,9 +27,9 @@ export default function ProjectPage() {
     <>
       <NavBar activeRoute="/portfolio"></NavBar>
 
-      <main>
+      <main className="max-w-6xl container mx-auto px-8">
         {/* hero */}
-        <section className="container mx-auto">
+        <section>
           <div className="relative w-full h-full mb-12">
             <img
               alt={`project preview for the ${proj.title} project`}
@@ -38,7 +39,7 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <div className="container mx-auto flex flex-col gap-8 lg:gap-16 lg:flex-row">
+        <div className="flex flex-col gap-8 lg:gap-16 lg:flex-row">
           {/* overview */}
           <section className="w-full lg:w-2/5 mx-auto">
             <div className="w-full flex flex-col md:flex-row justify-center py-8 border-t-2 border-b-2 solid border-tuna/5">
@@ -75,7 +76,7 @@ export default function ProjectPage() {
 
           {/* details */}
           <div className="lg:w-3/5">
-            <section className="container mx-auto">
+            <section>
               <header className="text-h3 md:text-h2 font-heading">
                 Project Background
               </header>
@@ -91,7 +92,7 @@ export default function ProjectPage() {
               </article>
             </section>
 
-            <section className="container mx-auto my-8">
+            <section className="my-8">
               <header className="text-h3 md:text-h2 font-heading">
                 Static Previews
               </header>
@@ -114,8 +115,9 @@ export default function ProjectPage() {
             </section>
           </div>
         </div>
+
         {/* next and previous pages */}
-        <section className="container mx-auto flex items-center justify-between flex-row flex-no-wrap border-t-2 border-b-2 solid border-tuna/5">
+        <section className="flex items-center justify-between flex-row flex-no-wrap border-t-2 border-b-2 solid border-tuna/5">
           <Link
             href={PROJECTS[prevProjectIdx].link}
             className="flex flex-col items-start md:flex-row md:items-center py-4 hover:bg-eggshell transition-colors flex-grow border-r-2 solid border-tuna/5">
@@ -150,6 +152,8 @@ export default function ProjectPage() {
             </span>
           </Link>
         </section>
+
+        <ContactPrompt />
       </main>
     </>
   );

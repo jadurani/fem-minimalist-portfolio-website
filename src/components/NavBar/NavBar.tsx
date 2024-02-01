@@ -53,11 +53,11 @@ export const NavBar = ({ activeRoute }: NavBarProps) => {
               <Image priority src={menuIcon} alt="open menu icon" />
             </button>
 
-            <ul className="py-4 hidden md:flex justify-stretch">
+            <ul className="py-4 hidden md:flex md:gap-8 justify-stretch items-end">
               {NAV_LINKS.map((navLink, idx) => (
                 <li
                   key={idx}
-                  className={`px-8 text-body2 uppercase tracking-widest hover:text-verdigris transition-colors ${activeRoute == navLink.path ? "text-verdigris" : "text-tuna"}`}>
+                  className={`text-body2 uppercase tracking-widest hover:text-verdigris transition-colors ${activeRoute == navLink.path ? "text-verdigris" : "text-tuna"}`}>
                   <Link href={navLink.path}>{navLink.label}</Link>
                 </li>
               ))}

@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => (
   <footer className={`w-screen bg-tuna text-white ${FontBody.variable}`}>
     <div className="container max-w-6xl mx-auto">
-      <div className="px-8 flex flex-col md:flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between px-8">
         <div className="flex flex-col md:flex-row md:flex-grow py-8 items-center">
           {/* Logo */}
           <svg xmlns="http://www.w3.org/2000/svg" width="61" height="32">
