@@ -45,12 +45,12 @@ export const NavBar = ({ activeRoute }: NavBarProps) => {
         } transition-colors duration-300 ease-in-out`}>
         <nav className="container max-w-6xl mx-auto p-8 lg:py-6 flex justify-between items-center lg:items-start">
           <Link href="/">
-            <Image src={logoImg} alt="website logo" priority />
+            <Image src={logoImg} alt="website logo" />
           </Link>
 
           <div>
             <button className="md:hidden" onClick={() => setIsMenuOpen(true)}>
-              <Image priority src={menuIcon} alt="open menu icon" />
+              <Image src={menuIcon} alt="open menu icon" />
             </button>
 
             <ul className="py-4 hidden md:flex md:gap-8 justify-stretch items-end">
@@ -70,10 +70,10 @@ export const NavBar = ({ activeRoute }: NavBarProps) => {
           <div className="h-full flex flex-col justify-between">
             <div className="flex justify-between">
               <Link href="/" className="p-8">
-                <Image src={logoImg} alt="website logo" priority />
+                <Image src={logoImg} alt="website logo" />
               </Link>
               <button className="p-8" onClick={() => setIsMenuOpen(false)}>
-                <Image priority src={menuCloseIcon} alt="close menu icon" />
+                <Image src={menuCloseIcon} alt="close menu icon" />
               </button>
             </div>
 
