@@ -17,8 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${FontHeading.variable} ${FontBody.variable}`}>
         {children}
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }
