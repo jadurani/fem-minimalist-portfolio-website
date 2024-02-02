@@ -33,11 +33,13 @@ export default function Home() {
             <Button
               label="About Me"
               isPrimary={true}
-              handleClick={() => {}}></Button>
+              handleClick={() => scrolltoHash("about-me")}></Button>
           </div>
         </div>
 
-        <div className="max-w-6xl px-8 container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center mb-8">
+        <div
+          id="about-me"
+          className="max-w-6xl px-8 container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center mb-8">
           <div className="w-[320px] h-[320px] sm:w-full sm:h-[520px] relative">
             <Image
               src={devImage}
@@ -79,3 +81,13 @@ export default function Home() {
     </>
   );
 }
+
+// let's make a function that receive the specific elementId as string and scroll into that elementId
+const scrolltoHash = function (elementId: string) {
+  const element = document.getElementById(elementId);
+  element?.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "nearest",
+  });
+};
