@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => (
   <footer className={`w-screen bg-tuna text-white ${FontBody.variable}`}>
-    <section className="container max-w-6xl mx-auto p-8 flex flex-col md:flex-row items-center justify-between">
+    <div className="container max-w-6xl mx-auto p-8 flex flex-col md:flex-row items-center justify-between">
       <nav className="flex flex-col md:flex-row items-center">
         {/* Logo */}
         <svg xmlns="http://www.w3.org/2000/svg" width="61" height="32">
@@ -65,7 +65,7 @@ const Footer = () => (
           </svg>
         </Link>
       </div>
-    </section>
+    </div>
   </footer>
 );
 
