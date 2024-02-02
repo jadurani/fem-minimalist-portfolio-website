@@ -9,7 +9,7 @@ export default function ContactMePage() {
       <NavBar activeRoute={"/contact-us"}></NavBar>
 
       <main className="max-w-6xl container mx-auto">
-        <section className="py-8 border-t-2 solid border-tuna/5 flex flex-col md:flex-row gap-4 md:gap-16">
+        <section className="p-8 border-t-2 solid border-tuna/5 flex flex-col md:flex-row gap-4 md:gap-16">
           <h1 className="flex-grow md:w-2/5 text-h2 md:text-h1 font-heading font-bold">
             Get in Touch
           </h1>
@@ -63,7 +63,7 @@ export default function ContactMePage() {
           </article>
         </section>
 
-        <section className="py-8 border-t-2 solid border-tuna/5 flex flex-col md:flex-row gap-4 md:gap-16">
+        <section className="p-8 border-t-2 solid border-tuna/5 flex flex-col md:flex-row gap-4 md:gap-16">
           <h1 className="flex-grow md:w-2/5 text-h2 md:text-h1 font-heading font-bold">
             Contact Me
           </h1>

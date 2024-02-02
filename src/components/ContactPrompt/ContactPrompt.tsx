@@ -7,7 +7,8 @@ import { useRouter } from "next/navigation";
 const ContactPrompt: React.FC = () => {
   const router = useRouter();
   return (
-    <div className={`my-8 py-8 ${FontBody.variable} ${FontHeading.variable}`}>
+    <div
+      className={`my-8 md:my-20 py-8 ${FontBody.variable} ${FontHeading.variable}`}>
       <div className="flex flex-col gap-8 sm:flex-row md:justify-between">
         <h2 className="text-center sm:w-full sm:text-left font-heading text-h2 font-bold leading-none md:text-h1">
           Interested in doing a project together?

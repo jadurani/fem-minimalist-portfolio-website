@@ -49,12 +49,12 @@ export default function Home() {
             />
           </div>
 
-          <article className="w-full self-stretch flex-grow flex flex-col justify-center py-8 border-t-2 border-b-2 solid border-tuna/5">
+          <article className="w-full self-stretch flex-grow flex flex-col justify-center py-8 border-t-2 border-b-2 solid border-tuna/5 lg:mx-16">
             <h2 className="font-heading font-bold text-h2 md:text-h1">
               About Me
             </h2>
 
-            <p className="text-tuna/60 py-4">
+            <p className="text-tuna/60 py-4 leading-relaxed lg:leading-loose">
               I&#39;m a junior front-end developer looking for a new role in an
               exciting company. I focus on writing accessible HTML, using modern
               CSS practices and writing clean JavaScript. When writing
