@@ -43,7 +43,10 @@ const Footer = () => (
         </div>
 
         <div className="flex items-center justify-center md:justify-end gap-4 mb-8 md:my-auto">
-          <Link href={"https://github.com/jadurani"} target="_blank">
+          <Link
+            href={"https://github.com/jadurani"}
+            target="_blank"
+            aria-label="Visit my Github profile">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24">
               <path
                 fill="#FFFFFF"
@@ -52,7 +55,10 @@ const Footer = () => (
             </svg>
           </Link>
 
-          <Link href={"https://twitter.com/jadurani"} target="_blank">
+          <Link
+            href={"https://twitter.com/jadurani"}
+            target="_blank"
+            aria-label="Visit my Twitter profile">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
               <path
                 fill="#FFFFFF"
@@ -61,7 +67,10 @@ const Footer = () => (
             </svg>
           </Link>
 
-          <Link href={"https://www.linkedin.com/in/jadurani/"} target="_blank">
+          <Link
+            href={"https://www.linkedin.com/in/jadurani/"}
+            target="_blank"
+            aria-label="Visit my LinkedIn profile">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 fill="#FFFFFF"

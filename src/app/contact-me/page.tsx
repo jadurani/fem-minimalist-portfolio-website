@@ -27,7 +27,10 @@ export default function ContactMePage() {
               using the form.
             </p>
             <div className="flex items-center gap-4 py-8">
-              <Link href={"https://github.com/jadurani"} target="_blank">
+              <Link
+                href={"https://github.com/jadurani"}
+                target="_blank"
+                aria-label="Visit my Github profile">
                 <Image
                   alt="github"
                   src={"/icons/github.svg"}
@@ -35,7 +38,10 @@ export default function ContactMePage() {
                   height={24}></Image>
               </Link>
 
-              <Link href={"https://twitter.com/jadurani"} target="_blank">
+              <Link
+                href={"https://twitter.com/jadurani"}
+                target="_blank"
+                aria-label="Visit my Twitter profile">
                 <Image
                   alt="twitter"
                   src={"/icons/twitter.svg"}
@@ -45,7 +51,8 @@ export default function ContactMePage() {
 
               <Link
                 href={"https://www.linkedin.com/in/jadurani/"}
-                target="_blank">
+                target="_blank"
+                aria-label="Visit my LinkedIn profile">
                 <Image
                   alt="linked in"
                   src={"/icons/linkedin.svg"}
