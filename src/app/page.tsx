@@ -17,7 +17,7 @@ export default function Home() {
       <NavBar activeRoute={activeRoute}></NavBar>
 
       <main>
-        <section className="max-w-6xl px-8 container mx-auto mb-16 relative">
+        <div className="max-w-6xl px-8 container mx-auto mb-16 relative">
           <div className="relative w-full h-full">
             <Image
               src={imgLandingBG}
@@ -35,9 +35,9 @@ export default function Home() {
               isPrimary={true}
               handleClick={() => {}}></Button>
           </div>
-        </section>
+        </div>
 
-        <section className="max-w-6xl px-8 container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center mb-8">
+        <div className="max-w-6xl px-8 container mx-auto flex flex-wrap md:flex-nowrap gap-4 md:gap-16 justify-center items-center mb-8">
           <div className="w-[320px] h-[320px] sm:w-full sm:h-[520px] relative">
             <Image
               src={devImage}
@@ -70,7 +70,7 @@ export default function Home() {
                 handleClick={() => router.push("/portfolio")}></Button>
             </div>
           </article>
-        </section>
+        </div>
 
         <section className="max-w-6xl container mx-auto px-8">
           <ContactPrompt />

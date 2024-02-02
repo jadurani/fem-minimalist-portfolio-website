@@ -64,38 +64,38 @@ export const NavBar = ({ activeRoute }: NavBarProps) => {
             </ul>
           </div>
         </nav>
-      </header>
 
-      <section
-        className={`${isMenuOpen ? "right-0" : "-right-[120%]"} transition-[right] top-0 fixed bg-eggshell w-screen h-screen duration-700 ease-in-out overflow-hidden z-50`}>
-        <div className="h-full flex flex-col justify-between">
-          <div className="flex justify-between">
-            <Link href="/" className="p-8">
-              <Image src={logoImg} alt="website logo" priority />
-            </Link>
-            <button className="p-8" onClick={() => setIsMenuOpen(false)}>
-              <Image priority src={menuCloseIcon} alt="close menu icon" />
-            </button>
-          </div>
+        <div
+          className={`${isMenuOpen ? "right-0" : "-right-[120%]"} transition-[right] top-0 fixed bg-eggshell w-screen h-screen duration-700 ease-in-out overflow-hidden z-50`}>
+          <div className="h-full flex flex-col justify-between">
+            <div className="flex justify-between">
+              <Link href="/" className="p-8">
+                <Image src={logoImg} alt="website logo" priority />
+              </Link>
+              <button className="p-8" onClick={() => setIsMenuOpen(false)}>
+                <Image priority src={menuCloseIcon} alt="close menu icon" />
+              </button>
+            </div>
 
-          <ul>
-            {NAV_LINKS.map((navLink, idx) => (
-              <li
-                key={idx}
-                onClick={() => setIsMenuOpen(false)}
-                className={`w-full py-4 text-center text-body2 uppercase tracking-widest hover:text-verdigris transition-colors ${activeRoute == navLink.path ? "text-verdigris" : "text-tuna"}`}>
-                <Link href={navLink.path} className="block">
-                  {navLink.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+            <ul>
+              {NAV_LINKS.map((navLink, idx) => (
+                <li
+                  key={idx}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`w-full py-4 text-center text-body2 uppercase tracking-widest hover:text-verdigris transition-colors ${activeRoute == navLink.path ? "text-verdigris" : "text-tuna"}`}>
+                  <Link href={navLink.path} className="block">
+                    {navLink.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-          <div className="text-body2 text-center text-tuna my-2">
-            Implemented by Jadurani Davalos ♥️
+            <div className="text-body2 text-center text-tuna my-2">
+              Implemented by Jadurani Davalos ♥️
+            </div>
           </div>
         </div>
-      </section>
+      </header>
     </>
   );
 };
