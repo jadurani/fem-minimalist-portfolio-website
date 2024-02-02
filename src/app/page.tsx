@@ -48,9 +48,9 @@ export default function Home() {
           </div>
 
           <article className="w-full self-stretch flex-grow flex flex-col justify-center py-8 border-t-2 border-b-2 solid border-tuna/5">
-            <header className="font-heading font-bold text-h2 md:text-h1">
+            <h2 className="font-heading font-bold text-h2 md:text-h1">
               About Me
-            </header>
+            </h2>
 
             <p className="text-tuna/60 py-4">
               I&#39;m a junior front-end developer looking for a new role in an

@@ -67,9 +67,9 @@ export default function ContactMePage() {
           <h1 className="flex-grow md:w-2/5 text-h2 md:text-h1 font-heading font-bold">
             Contact Me
           </h1>
-          <article className="text-tuna/60 md:w-3/5">
+          <div className="text-tuna/60 md:w-3/5">
             <ContactForm />
-          </article>
+          </div>
         </section>
       </main>
     </>

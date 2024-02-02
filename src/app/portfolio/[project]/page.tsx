@@ -29,7 +29,7 @@ export default function ProjectPage() {
 
       <main className="max-w-6xl container mx-auto px-8">
         {/* hero */}
-        <section>
+        <div>
           <div className="relative w-full h-full mb-12">
             <img
               alt={`project preview for the ${proj.title} project`}
@@ -37,16 +37,16 @@ export default function ProjectPage() {
               src={proj.staticPhotos.hero}
             />
           </div>
-        </section>
+        </div>
 
         <div className="flex flex-col gap-8 lg:gap-16 lg:flex-row">
           {/* overview */}
           <section className="w-full lg:w-2/5 mx-auto">
             <div className="w-full flex flex-col md:flex-row justify-center py-8 border-t-2 border-b-2 solid border-tuna/5">
               <div className="flex flex-col w-full">
-                <div className="font-heading font-bold text-h2 md:text-h1">
+                <h1 className="font-heading font-bold text-h2 md:text-h1">
                   {proj.title}
-                </div>
+                </h1>
 
                 <p className="text-tuna/60 py-4 md:hidden lg:block">
                   {proj.description}
@@ -77,9 +77,9 @@ export default function ProjectPage() {
           {/* details */}
           <div className="lg:w-3/5">
             <section>
-              <header className="text-h3 md:text-h2 font-heading">
+              <h2 className="text-h3 md:text-h2 font-heading">
                 Project Background
-              </header>
+              </h2>
               <article className="text-tuna/60">
                 This project was a front-end challenge from Frontend Mentor.
                 It&#39;s a platform that enables you to practice building
@@ -93,9 +93,9 @@ export default function ProjectPage() {
             </section>
 
             <section className="my-8">
-              <header className="text-h3 md:text-h2 font-heading">
+              <h2 className="text-h3 md:text-h2 font-heading">
                 Static Previews
-              </header>
+              </h2>
 
               <div className="relative w-full h-full mt-4">
                 <img
@@ -127,12 +127,12 @@ export default function ProjectPage() {
               src="/icons/arrow-left.svg"
               width={12}
               height={12}></Image>
-            <span>
-              <span className="block font-heading text-h3 md:text-h2">
+            <div>
+              <h2 className="block font-heading text-h3 md:text-h2">
                 {PROJECTS[prevProjectIdx].title}
-              </span>
+              </h2>
               <span className="text-tuna/60 block -mt-2">Previous Project</span>
-            </span>
+            </div>
           </Link>
 
           <Link
@@ -144,12 +144,12 @@ export default function ProjectPage() {
               src="/icons/arrow-right.svg"
               width={12}
               height={12}></Image>
-            <span>
-              <span className="block font-heading text-h3 md:text-h2">
+            <div>
+              <h2 className="block font-heading text-h3 md:text-h2">
                 {PROJECTS[nextProjectIdx].title}
-              </span>
+              </h2>
               <span className="text-tuna/60 block -mt-2">Next Project</span>
-            </span>
+            </div>
           </Link>
         </section>
 
