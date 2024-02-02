@@ -43,12 +43,12 @@ export const NavBar = ({ activeRoute }: NavBarProps) => {
         className={`w-screen ${
           isTransparent ? "bg-white/0" : "bg-white"
         } transition-colors duration-300 ease-in-out`}>
-        <div className="container max-w-6xl mx-auto p-8 lg:py-6 flex justify-between items-center lg:items-start">
+        <nav className="container max-w-6xl mx-auto p-8 lg:py-6 flex justify-between items-center lg:items-start">
           <Link href="/">
             <Image src={logoImg} alt="website logo" priority />
           </Link>
 
-          <nav>
+          <div>
             <button className="md:hidden" onClick={() => setIsMenuOpen(true)}>
               <Image priority src={menuIcon} alt="open menu icon" />
             </button>
@@ -62,11 +62,11 @@ export const NavBar = ({ activeRoute }: NavBarProps) => {
                 </li>
               ))}
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </header>
 
-      <div
+      <section
         className={`${isMenuOpen ? "right-0" : "-right-[120%]"} transition-[right] top-0 fixed bg-eggshell w-screen h-screen duration-700 ease-in-out overflow-hidden z-50`}>
         <div className="h-full flex flex-col justify-between">
           <div className="flex justify-between">
@@ -95,7 +95,7 @@ export const NavBar = ({ activeRoute }: NavBarProps) => {
             Implemented by Jadurani Davalos ♥️
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
